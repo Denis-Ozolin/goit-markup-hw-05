@@ -90,50 +90,12 @@ img {
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
+  border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
-/* СОЦИАЛЬНЫЕ СЕТИ */
-.social {
-  display: flex;
-  justify-content: space-between;
-}
-
-.social-link {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-
-  border-radius: 50%;
-  transition: background-color 250ms var(--timing-function);
-}
-
-.social-icon {
-  width: 20px;
-  height: 20px;
-}
-
-.social-link:hover,
-.social-link:focus {
-  background-color: var(--accent-color);
-  --color4: var(--bgc-accent-white);
-}
-
-/* соц сети подвал */
-.social.footer-social .social-link {
-  background-color: rgba(255, 255, 255, 0.1);
-  --color4: var(--bgc-accent-white);
-}
-
-.footer-social .social-link:hover,
-.footer-social .social-link:focus {
-  background-color: var(--accent-color);
-}
 /* HEADER */
 .header-page {
   background-color: var(--bgc-accent-white);
@@ -144,16 +106,16 @@ img {
   align-items: center;
 }
 
-.logo {
+.logo-page {
   display: block;
   margin-right: 86px;
-
-  color: var(--accent-color);
 
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
+
+  color: var(--accent-color);
 }
 
 .header-page .logo-part {
@@ -176,8 +138,8 @@ img {
   font-size: 14px;
   line-height: 1.1;
   letter-spacing: 0.02em;
-  color: var(--secondary-text-color);
 
+  color: var(--secondary-text-color);
   transition: color 250ms var(--timing-function);
 }
 
@@ -187,7 +149,6 @@ img {
 
 .current:after {
   content: "";
-
   position: absolute;
   left: 0;
   bottom: 0;
@@ -220,13 +181,18 @@ img {
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: 0.02em;
-  color: var(--primary-text-color);
 
+  color: var(--primary-text-color);
   transition: color 250ms var(--timing-function);
 }
 
 .feedback-header > svg {
   margin-right: 10px;
+}
+
+.feedback-icon {
+  fill: currentColor;
+  transition: fill 250ms var(--timing-function);
 }
 
 .envelope-icon {
@@ -242,7 +208,7 @@ img {
 .feedback-header:hover,
 .feedback-header:focus {
   color: var(--accent-color);
-  --color5: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 /* FOOTER */
@@ -264,7 +230,7 @@ img {
 }
 
 /* логотип */
-.feedback-info > .logo {
+.feedback-info > .logo-page {
   margin-bottom: 10px;
 }
 
@@ -287,6 +253,7 @@ img {
 }
 .feedback-footer {
   color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms var(--timing-function);
 }
 .feedback-footer:hover,
 .feedback-footer:focus {
@@ -298,26 +265,55 @@ img {
   min-width: 206px;
 }
 
-/* Саша сказал, что єто не заголовок. */
 .invite {
+  margin-bottom: 21px;
+
   font-weight: 700;
   line-height: 1.1;
   text-transform: uppercase;
 
   color: var(--bgc-accent-white);
+}
 
-  margin-bottom: 21px;
+/* СОЦИАЛЬНЫЕ СЕТИ */
+.footer-social {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms var(--timing-function);
+}
+
+.footer-social-icon {
+  width: 20px;
+  height: 20px;
+
+  fill: var(--bgc-accent-white);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--accent-color);
 }
 
 /*СЕКЦИЯ КОПИРАЙТ */
 .copyright {
   padding-top: 18px;
   padding-bottom: 21px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
 
   font-size: 12px;
   line-height: 2;
 
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.4);
 }
