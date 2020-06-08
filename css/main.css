@@ -251,12 +251,12 @@
   border: 1px solid;
   border-color: #afb1b8;
   border-radius: 4px;
-  transition: border-color 5s var(timing-function);
+  transition: border-color 250ms var(--timing-function);
 }
 
 .logo-customer {
   fill: #afb1b8;
-  transition: fill 5s var(timing-function);
+  transition: fill 250ms var(--timing-function);
 }
 
 .customer:hover,
